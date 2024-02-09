@@ -9,7 +9,7 @@ public class Board {
 					board[i][j]=new Square();
 		}
 	}
-
+	
 	public static void initialisePieces(){
 		//Black pieces
 		setPiece(0,0,new Rook(PieceColour.BLACK));
@@ -75,10 +75,13 @@ public class Board {
 		board[i0][j0].removePiece();
 		if (Board.hasPiece(i1,j1)){
 			String capture=Board.getPiece(i1,j1).getClass().getSimpleName();
+			PieceColour p2Colour = Board.getPiece(i1, j1).getColour();
+			
 			System.out.println("> "+Board.getPiece(i1,j1).getColour().toString()+" "+capture+" captured!");
 			if (capture.equals("King")){
 				kingCaptured=true;
 			}
+			
 		}
 		Board.setPiece(i1,j1,p);
 		printBoard();

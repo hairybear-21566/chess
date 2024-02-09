@@ -41,7 +41,8 @@ public class Game {
 									p=Board.getPiece(i0, j0);
 								else if (!whitesTurn && Board.getPiece(i0, j0).getColour()==PieceColour.BLACK)
 									p=Board.getPiece(i0, j0);
-								else{
+								else {
+									//if((Board.getPiece(i0, j0).getColour()!=PieceColour.WHITE && whitesTurn) || (Board.getPiece(i0, j0).getColour()!=PieceColour.BLACK && !whitesTurn))
 									correctOrigin=false;
 									System.out.println("> You can only move a piece of your colour.");
 								}
