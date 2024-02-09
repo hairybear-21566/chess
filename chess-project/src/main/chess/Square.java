@@ -1,25 +1,25 @@
 package chess;
 
-class Square {
-	boolean hasPiece;
-	Piece p;
+public class Square {
+	private boolean hasPiece;
+	private Piece p;
 
 
-	Piece getPiece(){
+	public Piece getPiece(){
 		return p;
 	}
 
-	void setPiece(Piece pIn){
+	public void setPiece(Piece pIn){
 		p=pIn;
 		hasPiece=true;
 	}
 
-	void removePiece(){
+	public void removePiece(){
 		hasPiece=false;
 		p=null;
 	}
 
-	boolean hasPiece(){
+	public boolean hasPiece(){
 		return hasPiece;
 	}
 }
